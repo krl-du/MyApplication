@@ -7,93 +7,30 @@
     tools:context=".ContatoActivity"
     android:orientation="vertical">
 
+
+    <EditText
+        android:id="@+id/nomeEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+       android:hint="Nome" />
+
+    <EditText
+        android:id="@+id/telefoneEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Telefone" />
+
     <Button
-        android:id="@+id/button"
-        android:layout_width="215dp"
-        android:layout_height="68dp"
-        android:text="Menu"
-        tools:layout_editor_absoluteX="1147dp"
-        tools:layout_editor_absoluteY="0dp" />
+        android:id="@+id/salvarContatoButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Salvar" />
 
     <EditText
-        android:id="@+id/editText"
-        android:layout_width="wrap_content"
+        android:id="@+id/emailEditText"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Recupera Filo"
-        tools:layout_editor_absoluteX="33dp"
-        tools:layout_editor_absoluteY="79dp" />
-
-    <EditText
-        android:id="@+id/editText2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Mancata ucita della calza"
-        tools:layout_editor_absoluteX="33dp"
-        tools:layout_editor_absoluteY="125dp" />
-
-    <EditText
-        android:id="@+id/editText3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Abassa aghi scarico bordo"
-        tools:layout_editor_absoluteX="33dp"
-        tools:layout_editor_absoluteY="171dp" />
-
-    <EditText
-        android:id="@+id/editText4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Fillo rotto"
-        tools:layout_editor_absoluteX="33dp"
-        tools:layout_editor_absoluteY="217dp" />
-
-    <EditText
-        android:id="@+id/editText5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Abassa aghi talone"
-        tools:layout_editor_absoluteX="33dp"
-        tools:layout_editor_absoluteY="263dp" />
-
-    <EditText
-        android:id="@+id/editText6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Tiragio"
-        tools:layout_editor_absoluteX="33dp"
-        tools:layout_editor_absoluteY="309dp" />
-
-    <EditText
-        android:id="@+id/editText7"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Apripalete scarico bordo"
-        tools:layout_editor_absoluteX="33dp"
-        tools:layout_editor_absoluteY="355dp" />
-
-    <EditText
-        android:id="@+id/editText8"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Fillo no tagliato"
-        tools:layout_editor_absoluteX="33dp"
-        tools:layout_editor_absoluteY="401dp" />
+        android:text="Email" />
 
 
 </LinearLayout>
