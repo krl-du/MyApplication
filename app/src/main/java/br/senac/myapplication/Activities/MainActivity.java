@@ -1,13 +1,14 @@
-package br.senac.myapplication;
+package br.senac.myapplication.Activities;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.DragEvent;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
+
+import br.senac.myapplication.R;
 
 public class MainActivity extends AppCompatActivity {
 
