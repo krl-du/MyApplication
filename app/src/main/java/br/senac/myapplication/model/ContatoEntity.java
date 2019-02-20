@@ -7,10 +7,14 @@ public class ContatoEntity {
     private  Double pontuacao;
 
     public ContatoEntity(String nome, String telefone, Double pontuacao) {
+
         this.nome = nome;
         this.telefone = telefone;
         this.pontuacao = pontuacao;
 
+    }
+
+    public ContatoEntity() {
     }
 
     public Integer getId() {

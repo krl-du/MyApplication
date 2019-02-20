@@ -10,10 +10,10 @@ public class SQLLiteHelper extends SQLiteOpenHelper {
 
     private static final Integer DB_VERSION = 1;
 
-    private final String DB_CREAT = "CREAT TABLE CONTATO (ID, INTEGER PRIMARY KEY AUTOINCREMENT," +
+    private final String DB_CREATE = "CREATE TABLE CONTATO (ID INTEGER PRIMARY KEY AUTOINCREMENT," +
             " NOME TEXT," +
             " TELEFONE TEXT," +
-            " EMAIL," +
+            " EMAIL TEXT," +
             " PONTUACAO REAL)";
 
     public SQLLiteHelper( Context context) {
@@ -22,7 +22,7 @@ public class SQLLiteHelper extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-
+db.execSQL(DB_CREATE);
     }
 
     @Override

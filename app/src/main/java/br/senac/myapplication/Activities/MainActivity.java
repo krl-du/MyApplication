@@ -8,7 +8,11 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
 
+import java.util.List;
+
 import br.senac.myapplication.R;
+import br.senac.myapplication.dao.Contato;
+import br.senac.myapplication.model.ContatoEntity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -21,12 +25,14 @@ public class MainActivity extends AppCompatActivity {
         //Recupera a referencia da lista que tem no layout do aplicatvo
         ListView listaContatos = findViewById(R.id.ListaContatos);
 
-        //Cria Lista de contTOA COMO STRING
-        String [] contatos = {"Duplo Cilindro", "Mono Cilindro", "Aldo", "Ponga", "recupera filo", "Mancata ucita della calza", "abassa aghi scarico bordo", "Fillo Rotto ", "abassa aghi talone", "Tiragio", "Apripalete scarico bordo", "Filo no tagliato"};
+        //CRIA LISTA DE CONTATO COMO STRING
+        Contato contatoDAO = new Contato (this);
+        List<ContatoEntity> contatos = contatoDAO.Listar();
+
 
         // PARA CONSEGUIRMOS EXIBIR A LISTA DE LISTVIEW PRECISO
         //CRIAR UM ADAPTOR
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, contatos);
+        ArrayAdapter<ContatoEntity> adapter = new ArrayAdapter<ContatoEntity>(this, android.R.layout.simple_list_item_1, contatos);
 
         // insere o adaptor na lista de contatos
         listaContatos.setAdapter(adapter);
@@ -39,6 +45,7 @@ public class MainActivity extends AppCompatActivity {
                                           public void onClick(View v) {
                                               Intent contato = new Intent(MainActivity.this, ContatoActivity.class);
                                               startActivity(contato);
+                                              finish();
                                           }
                                       }
 
