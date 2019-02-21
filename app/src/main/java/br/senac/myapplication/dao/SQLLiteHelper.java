@@ -9,6 +9,8 @@ public class SQLLiteHelper extends SQLiteOpenHelper {
     private static final String DB_NAME = "Agenda.Senac.db";
 
     private static final Integer DB_VERSION = 1;
+    private static final String DB_Contato = ;
+    private static final String DB_Endereco = ;
 
     private final String DB_CREATE = "CREATE TABLE CONTATO (ID INTEGER PRIMARY KEY AUTOINCREMENT," +
             " NOME TEXT," +
@@ -16,13 +18,15 @@ public class SQLLiteHelper extends SQLiteOpenHelper {
             " EMAIL TEXT," +
             " PONTUACAO REAL)";
 
+
     public SQLLiteHelper( Context context) {
         super(context, DB_NAME, null, DB_VERSION);
     }
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-db.execSQL(DB_CREATE);
+db.execSQL(DB_Contato);
+db.execSQL(DB_Endereco);
     }
 
     @Override
@@ -30,4 +34,3 @@ db.execSQL(DB_CREATE);
 
     }
 }
-

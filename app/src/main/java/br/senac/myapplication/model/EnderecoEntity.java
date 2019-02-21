@@ -1,51 +1,46 @@
 package br.senac.myapplication.model;
 
 public class EnderecoEntity {
-    public EnderecoEntity(String to, String s1, String s2) {
+    private Integer id;
+    private String rua;
+    private String numero;
+    private String cidade;
+
+    public EnderecoEntity(String rua, String numero, String cidade) {
+        this.rua = rua;
+        this.numero = numero;
+        this.cidade = cidade;
     }
 
-    public class ContatoEntity {
-        private Integer id;
-        private String rua;
-        private String numero;
-        private String cidade;
+    public Integer getId() {
+        return id;
+    }
 
-        public ContatoEntity(String rua, String numero, String cidade) {
-            this.rua = rua;
-            this.numero = numero;
-            this.cidade = cidade;
-        }
+    public void setId(Integer id) {
+        this.id = id;
+    }
 
-        public Integer getId() {
-            return id;
-        }
+    public String getRua() {
+        return rua;
+    }
 
-        public void setId(Integer id) {
-            this.id = id;
-        }
+    public void setRua(String rua) {
+        this.rua = rua;
+    }
 
-        public String getRua() {
-            return rua;
-        }
+    public String getNumero() {
+        return numero;
+    }
 
-        public void setRua(String rua) {
-            this.rua = rua;
-        }
+    public void setNumero(String numero) {
+        this.numero = numero;
+    }
 
-        public String getNumero() {
-            return numero;
-        }
+    public String getCidade() {
+        return cidade;
+    }
 
-        public void setNumero(String numero) {
-            this.numero = numero;
-        }
-
-        public String getCidade() {
-            return cidade;
-        }
-
-        public void setCidade(String cidade) {
-            this.cidade = cidade;
-        }
+    public void setCidade(String cidade) {
+        this.cidade = cidade;
     }
 }

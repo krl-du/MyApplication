@@ -23,19 +23,19 @@ public class Contato {
 
     }
 
-    public void salvar(ContatoEntity contato){
+    public void salvar(ContatoEntity contato) {
 
-            sqLiteDatabase  = sqLiteHelper.getWritableDatabase();
+        sqLiteDatabase = sqLiteHelper.getWritableDatabase();
 
-            ContentValues values = new ContentValues();
-            values.put("NOME", contato.getNome());
-            values.put("TELEFONE", contato.getTelefone());
-            values.put("PONTUACAO", contato.getPontuacao());
+        ContentValues values = new ContentValues();
+        values.put("NOME", contato.getNome());
+        values.put("TELEFONE", contato.getTelefone());
+        values.put("PONTUACAO", contato.getPontuacao());
 
-            sqLiteDatabase.insert( "CONTATO",  null, values);
-            sqLiteDatabase.close();
+        sqLiteDatabase.insert("CONTATO", null, values);
+        sqLiteDatabase.close();
 
-        }
+    }
 
         public List<ContatoEntity>Listar(){
         sqLiteDatabase = sqLiteHelper.getWritableDatabase();
